@@ -1,0 +1,32 @@
+1- npm init -y
+
+2- npm install mysql2
+
+3- npm install express 
+
+4- npm install morgan
+
+5- npm install nodemon -D 
+
+6-npm i dotenv
+
+6- src/index.js  para ejecución
+
+Se utiliso Postman con los point siguientes
+
+
+get localhost:3606/libros
+post localhost:3606/libro
+put localhost:3606/libro
+delete localhost:3606/libro
+get localhost:3606/libro/id
+
+ejemplo para agregar lote de dato
+ {
+       
+        "nombre": "Inteligencia artificial",
+        "autor": "Judith Vives",
+        "categoria": "Ciencia",
+        "año_publicacion": "2024-05-24",
+        "ISBN": "9788423429448"
+    }
