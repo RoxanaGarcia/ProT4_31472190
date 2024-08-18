@@ -2,6 +2,7 @@ import {pool} from './database.js';
 
 class LibroController{
   
+  //  listado de libros
   async  getAll(req, res){
     try{
         const [result] = await pool.query('Select * FROM libros' );
@@ -12,6 +13,7 @@ class LibroController{
     }
     }
 
+    // Lista un libro pasado como parametro el id de libros
     async getOne (req, res){
       const libro = req.body;
       const {id} = req.params;
@@ -29,6 +31,7 @@ class LibroController{
       }
   }
 
+  // Para agregar libros
 async add(req, res){
   const libro = req.body;
   const { nombre, autor, categoria, año_publicacion, ISBN} = req.body;
@@ -51,7 +54,7 @@ try {
 }
  }
 
-
+// Para eliminar libro pasadndo el ISBN del libro a eliminar, conciderando que este es un codigo unico de libros
 async delete(req, res){
  try {
   const libro = req.body;
@@ -68,7 +71,7 @@ async delete(req, res){
   }
 }
 
-
+// Actualizar libro pasando el id del libro a modificar
 async update (req, res){
  
     try {
